@@ -1,0 +1,12 @@
+.done {
+  text-decoration: line-through;
+}
+
+.button-add {
+  color: white;
+}
+
+.button-delete {
+  font-weight: bold;
+  padding: 3px 6px;
+}
