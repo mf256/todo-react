@@ -1,15 +1,13 @@
-import './App.css';
 import TodoApp from './containers/TodoApp';
 import Title from './components/Title';
 
 function App(): JSX.Element {
-  const title = "Todo List";
+  const title = 'Todo List';
 
   return (
-    <div className="app">
-      <Title title={title}/>
-
-
+    <div>
+      <Title title={title} />
+      <TodoApp />
     </div>
   );
 }

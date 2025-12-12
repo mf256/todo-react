@@ -1,30 +1,71 @@
-# React + TypeScript + Vite
+# todo-app-vue
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The Todo List application built using React. The application implements web development technologies such as React, TypeScript, Vite, Tailwind CSS, React Hook Form, and Immer to provide a seamless user experience.
 
-Currently, two official plugins are available:
+Live demo: https://mf256.github.io/todo-react
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Table of contents
 
-## Expanding the ESLint configuration
+- [General info](#general-info)
+- [Technologies](#technologies)
+- [Features](#features)
+- [Screenshots](#screenshots)
+- [Setup](#setup)
+- [Status](#status)
+- [License](#license)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## General info
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+The primary goal of this project is to develop a straightforward Todo List application utilizing the React framework and other web development technologies.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Technologies
+
+- [React](https://react.dev)
+- [TypeScript](https://www.typescriptlang.org)
+- [Vite](https://vitejs.dev)
+- [Tailwind CSS](https://tailwindcss.com)
+- [React Hook Form](https://github.com/react-hook-form/react-hook-form)
+- [Immer](https://github.com/immerjs/immer)
+- [Prettier](https://prettier.io)
+- [ESLint](https://eslint.org)
+
+## Features
+
+- Add new item
+- Set item as done
+- Remove item
+
+## Screenshots
+
+![Example screenshot 1](./doc/screen1.png)
+
+## Setup
+
+How to run this project.
+
+1. Clone this repo
+
+2. To run, go to project folder and run
+
+`$ npm install`
+
+3. Now start dev server by running -
+
+`$ npm run start`
+
+4. visit - http://localhost:3000/
+
+To create production ready codes -
+
+`$ npm run build`
+
+for more commands refer `package.json`
+
+## Status
+
+Project is finished.
+
+## License
+
+MIT

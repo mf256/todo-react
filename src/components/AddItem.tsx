@@ -1,22 +1,35 @@
-const AddItem = () => {
-  return (
-    <div className="input-group mb-3">
-      <input
-        type="text"
-        className="form-control"
-        placeholder="Enter new element"
-        aria-label="Recipient's username"
-        aria-describedby="button-addon2"
-      />
-      <button
-        className="btn btn-outline-secondary btn-primary button-add"
-        type="button"
-        id="button-addon2"
-      >
-        Add
-      </button>
-    </div>
-  );
+import { SubmitHandler, useForm } from 'react-hook-form';
+
+interface AddItemProps {
+  onAdd: (name: string) => void;
 }
+
+interface FormFiels {
+  name: string;
+}
+
+const AddItem = (props: AddItemProps) => {
+  const { onAdd } = props;
+  const { register, handleSubmit, reset } = useForm<FormFiels>();
+
+  const onSubmit: SubmitHandler<FormFiels> = (formData: FormFiels) => {
+    onAdd(formData.name);
+    reset();
+  };
+
+  return (
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <div className="flex justify-between">
+        <input
+          {...register('name')}
+          type="text"
+          className="flex-grow p-2 rounded-l"
+          placeholder="Enter new element"
+        />
+        <input className="text-white bg-blue-500 p-2 rounded-r" type="submit" value="Add" />
+      </div>
+    </form>
+  );
+};
 
 export default AddItem;
